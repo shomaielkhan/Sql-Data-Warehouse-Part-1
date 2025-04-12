@@ -1,11 +1,17 @@
 /*
---------------------------
-Full Load of Data
+===============================================================================
+Stored Procedure: Load Bronze Layer (Source -> Bronze)
+===============================================================================
+Script Purpose:
+    This stored procedure loads data into the 'bronze' schema from external CSV files. 
+    It performs the following actions:
+    - Truncates the bronze tables before loading data.
+    - Uses the `BULK INSERT` command to load data from csv Files to bronze tables.
 
-Purpose of the Script:
-	In this script, we have bulk inserted data from the source crm/erp, upon executing the script 
-	truncate the table and bulk insert the data inside the table.
-	*/
+Parameters:
+    None. 
+	  This stored procedure does not accept any parameters or return any values.
+*/
 exec bronze.load_bronze
 use DataWarehouse;
 
